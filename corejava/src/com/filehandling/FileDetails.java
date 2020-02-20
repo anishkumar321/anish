@@ -1,5 +1,4 @@
 package com.filehandling;
-import java.io.File;
 import java.sql.Timestamp;
 import java.io.File;
 
@@ -18,10 +17,8 @@ public class FileDetails {
 			System.out.println("File write: "+file.canWrite());
 			System.out.println("File execute: "+file.canExecute());
 			System.out.println("Last Modified: "+new Timestamp(file.lastModified()).toLocalDateTime());
-
 			System.out.println("File?: "+file.isFile());
 			System.out.println("Directory?:"+file.isDirectory());
-
 			System.out.println("\n");
 			
 		}
