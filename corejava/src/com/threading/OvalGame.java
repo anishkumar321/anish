@@ -13,7 +13,7 @@ public class OvalGame extends Frame implements Runnable{
 	int y1 = 400, y2 = 400, y3 = 400;
 	public OvalGame() {
 		super("Oval game");
-		setBackground(Color.CYAN);
+		setBackground(Color.GRAY);
 		setSize(500, 500);
 		setVisible(true);
 		this.addWindowListener(new WindowAdapter() {
