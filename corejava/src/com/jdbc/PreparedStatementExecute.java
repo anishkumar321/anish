@@ -19,8 +19,8 @@ public class PreparedStatementExecute{
 	}
 	public static void insert(Connection dbcon) throws Exception{
 		PreparedStatement pstmt=dbcon.prepareStatement("INSERT INTO newtable VALUES(?,?,?)");
-		pstmt.setInt(1,34);
-		pstmt.setString(2,"Raj");
+		pstmt.setInt(1,888);
+		pstmt.setString(2,"Raju");
 		pstmt.setInt(3,96850);
 		int update=pstmt.executeUpdate();
 		System.out.println("DATABASE UPDATED !!");
@@ -28,7 +28,7 @@ public class PreparedStatementExecute{
 		
 	}
 	public static void delete(Connection dbcon) throws Exception{
-		PreparedStatement pstmt1=dbcon.prepareStatement("DELETE FROM newtable WHERE Id=92");
+		PreparedStatement pstmt1=dbcon.prepareStatement("DELETE FROM newtable WHERE Id=97");
 		int update1=pstmt1.executeUpdate();
 		System.out.println("DATABASE DELETED !!");
 		pstmt1.close();
@@ -39,7 +39,7 @@ public class PreparedStatementExecute{
 		ResultSet rs=pstmt2.executeQuery();
 		
 		System.out.println("DATABASE !!");
-		pstmt2.close();
+		
 		while(rs.next()) {
 			int id=rs.getInt("Id");
 			String name=rs.getString("name");
@@ -47,6 +47,7 @@ public class PreparedStatementExecute{
 			System.out.println(id+"-"+name+"-"+salary);
 		
 		}
+		pstmt2.close();
 		rs.close();
 	}
 }
