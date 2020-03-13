@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+ 
+<ehcache>
+ 
+<defaultCache maxElementsInMemory="100" eternal="false" 
+timeToIdleSeconds="120" timeToLiveSeconds="200" />
+
+<cache name="com.hibernate.cache.Product" maxElementsInMemory="100" 
+eternal="false" timeToIdleSeconds="15" timeToLiveSeconds="200" />
+ 
+</ehcache>
